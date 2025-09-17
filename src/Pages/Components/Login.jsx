@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const user = () => {
+    navigate("/user");
+  };
   return (
     <div className="max-w-sm mx-auto mt-1 p-[10px] min-h-screen">
       <h3 className="text-2xl text-[#1D2226] font-medium mb-4 text-left">
@@ -46,6 +52,7 @@ function Login() {
 
         <button
           type="submit"
+          onClick={user}
           className="w-full bg-[#CBCBCB] text-white py-2 rounded-md hover:bg-[#B0B0B0] transition"
         >
           Login

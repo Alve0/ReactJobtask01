@@ -1,6 +1,12 @@
 import React from "react";
 
 function Register() {
+  const navigate = useNavigate();
+
+  const user = () => {
+    navigate("/user");
+  };
+
   return (
     <div className="max-w-sm mx-auto mt-1 p-[10px] min-h-screen">
       <h3 className="text-2xl text-[#1D2226] font-medium mb-4 text-left">
@@ -125,6 +131,7 @@ function Register() {
 
         <button
           type="submit"
+          onClick={user}
           className="w-full bg-[#6C25FF] text-white py-2 rounded-md hover:bg-[#5A1FD6] transition"
         >
           Create Account
